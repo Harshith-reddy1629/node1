@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   bcrypt: 5.0.1
+  dotenv: ^16.3.1
   express: 4.17.1
   jsonwebtoken: 8.5.1
   nodemon: 2.0.7
@@ -15,6 +16,9 @@ dependencies:
   nodemon: 2.0.7
   sqlite: 4.0.19
   sqlite3: 5.0.2
+
+devDependencies:
+  dotenv: 16.3.1
 
 packages:
 
@@ -492,6 +496,11 @@ packages:
     dependencies:
       is-obj: 2.0.0
     dev: false
+
+  /dotenv/16.3.1:
+    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+    engines: {node: '>=12'}
+    dev: true
 
   /duplexer3/0.1.5:
     resolution: {integrity: sha512-1A8za6ws41LQgv9HrE/66jyC5yuSjQ3L/KOpFtoBilsAK2iA2wuS5rTt1OCzIvtS2V7nVmedsUU+DGRcjBmOYA==}
