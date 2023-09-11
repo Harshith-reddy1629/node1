@@ -16,12 +16,14 @@ const databasePath = path.join(__dirname, "covid19IndiaPortal.db");
 
 const app = express();
 
-app.use(
-  cors({
-    methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
-    origin: "*",
-  })
-);
+// app.use(
+//   cors({
+//     "Access-Control-Allow-Origin": "*",
+//     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
+//   })
+// );
+
+app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
@@ -87,7 +89,7 @@ function authenticateToken(request, response, next) {
   }
 }
 
-app.post("/login/", cors(), async (request, response) => {
+app.post("/login/", async (request, response) => {
   const { username, password } = request.body;
   const selectUserQuery = `SELECT * FROM user WHERE username = '${username}';`;
   const databaseUser = await database.get(selectUserQuery);
