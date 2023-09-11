@@ -16,14 +16,15 @@ const databasePath = path.join(__dirname, "covid19IndiaPortal.db");
 
 const app = express();
 
-// app.use(
-//   cors({
-//     "Access-Control-Allow-Origin": "*",
-//     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
-//   })
-// );
+app.use(
+  cors()
+  //       {
+  //     "Access-Control-Allow-Origin": "*",
+  //     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
+  //   }
+);
 
-app.use(express.json());
+// app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
